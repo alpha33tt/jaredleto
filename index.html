@@ -41,29 +41,47 @@
             border: none; cursor: pointer; font-size: 16px; border-radius: 5px;
         }
         .subscribe-btn:hover { background: #cc5500; }
+		
+		.read-more-btn {
+        background-color: #ff6600; /* Set background color */
+        color: white; /* Set text color */
+        padding: 10px 20px; /* Add some padding */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Optional: round the corners */
+        display: inline-block; /* To ensure the link behaves like a button */
+        font-weight: bold; /* Optional: make the text bold */
+    }
+
+    .read-more-btn:hover {
+        background-color: #e65c00; /* Slightly darker on hover */
+    }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Join Our Mailing List</h1>
-	<h1> <span style=" color: #ff6600;">Get Your Tickets</span></h1>
+		<h1> <span style=" color: #ff6600;">Get Your Tickets</span></h1>
         <p>Get exclusive access to premium content and updates!</p>
 
-        <div class="tier">
-            <h2>Basic</h2>
-            <p class="price">$500/year</p>
-            <button class="subscribe-btn" onclick="redirectToPayment(500)">Subscribe</button>
-        </div>
+       <div class="tier">
+    <h2>Basic</h2>
+    <a href="https://thirtysecondstomars.onrender.com/thirtysecondstomars.com/vip.html" class="read-more-btn" target="_blank">Read More about Basic</a>
+    <p class="price">$500/year</p>
+    <button class="subscribe-btn" onclick="redirectToPayment(500)">Subscribe</button>
+</div>
+
 
         <div class="tier">
             <h2>Premium</h2>
+			    <a href="https://thirtysecondstomars.onrender.com/thirtysecondstomars.com/vip.html" class="read-more-btn" target="_blank">Read More about Premium</a>
             <p class="price">$2,000/year</p>
             <button class="subscribe-btn" onclick="redirectToPayment(2000)">Subscribe</button>
         </div>
 
         <div class="tier">
             <h2>VIP</h2>
+						    <a href="https://thirtysecondstomars.onrender.com/thirtysecondstomars.com/vip.html" class="read-more-btn" target="_blank">Read More about Vip</a>
             <p class="price">$5,000/year</p>
             <button class="subscribe-btn" onclick="redirectToPayment(5000)">Subscribe</button>
         </div>
