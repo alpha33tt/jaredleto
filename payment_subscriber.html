@@ -1,98 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Options</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://images.pexels.com/photos/29707290/pexels-photo-29707290/free-photo-of-vibrant-black-and-white-concert-at-glastonbury.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1;
-        }
-        h1 { color: #333; }
-        .payment-option {
-            background: #fff;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 2px solid #ddd;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .copy-btn {
-            background: #ff6600;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            border-radius: 3px;
-        }
-        .copy-btn:hover { background: #cc5500; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway</title>
+  <style>
+    /* General Reset */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #FF5722; /* Bright Orange - ThirtySecondsToMars Theme */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Main Content Area */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+      text-align: center;
+    }
+
+    /* Content Box */
+    .content {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    /* Title Text */
+    h1 {
+      font-size: 36px;
+      color: #FF5722; /* Orange color for emphasis */
+      margin-bottom: 20px;
+    }
+
+    /* Paragraphs */
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      font-size: 18px;
+      color: #FF5722; /* Orange color for contact info */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #FF5722; /* Bright Orange - ThirtySecondsToMars Theme */
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Links Styling */
+    a {
+      color: #FF5722; /* Matching theme color for links */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design: Make it mobile-friendly */
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p, .contact-info {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Choose Your Payment Method</h1>
-        <p>Pay the amount: <strong id="amount"></strong></p>
+<header>
+  <h1>Payment Gateway</h1>
+</header>
 
-        <div class="payment-option">
-            <span>Pay with Crypto | BITCOIN (btc address):<br><br> <strong id="bitcoin">bc1q8tl45qd9auk9gs3z23l2p7cyp75xf5q68pqk9x</strong></span>
-            <button class="copy-btn" onclick="copyToClipboard('bitcoin')">Copy</button>
-        </div>
+<main>
+  <div class="content">
+    <h1>Payment Method Update</h1>
+    <p>To make your payment, please reach out to <strong>ThirtySecondsToMars</strong> for the updated payment method.</p>
+    <p>Contact them using the information below:</p>
+    <p class="contact-info">
+      <strong>Email:</strong> <a href="mailto:contact@thirtysecondstomars.com">contact@thirtysecondstomars.com</a><br>
+      <strong>Telegram:</strong> <a href="https://t.me/ThirtySecondsToMars" target="_blank">t.me/ThirtySecondsToMars</a>
+    </p>
+  </div>
+</main>
 
-        <div class="payment-option">
-            <span>Pay with Crypto | TRC20 (usdt address):<br><br> <strong id="usdt">TNYqF5Tb7q2nXp6EwaWPfrCTf7viHmXTTY</strong></span>
-            <button class="copy-btn" onclick="copyToClipboard('usdt')">Copy</button>
-        </div>
-        
-        <div class="payment-option">
-            <span><strong>Note:</strong> Please send proof of payment to the email below.<br><br> <strong id="email">info.adventures.inwonderland@gmail.com</strong></span>
-            <button class="copy-btn" onclick="copyToClipboard('email')">Copy</button>
-        </div>
-
-        <div class="payment-option">
-            <span>Contact us for assistance with payments at:<br><br> <strong id="contact">info.adventures.inwonderland@gmail.com</strong></span>
-            <button class="copy-btn" onclick="copyToClipboard('contact')">Copy</button>
-        </div>
-    </div>
-
-    <script>
-        // Get the payment amount from the URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        document.getElementById("amount").innerText = "$" + getQueryParam("amount");
-
-        // Copy payment address to clipboard
-        function copyToClipboard(id) {
-            const text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Copied: " + text);
-            });
-        }
-    </script>
+<footer>
+  <p>&copy; 2025 ThirtySecondsToMars. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
